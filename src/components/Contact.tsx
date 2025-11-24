@@ -77,7 +77,7 @@ const Contact = () => {
                     <Linkedin className="h-5 w-5" />
                   </a>
                   <a 
-                    href="mailto:yaredabebe@example.com"
+                    href="mailto:yaredabebe0101@gmail.com"
                     className="w-12 h-12 bg-muted hover:bg-primary hover:text-white rounded-lg flex items-center justify-center transition-all hover:scale-110"
                   >
                     <Mail className="h-5 w-5" />
