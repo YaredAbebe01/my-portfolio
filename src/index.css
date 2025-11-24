@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 25% 97%;
+    --foreground: 220 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+
+    --primary: 230 45% 30%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 190 85% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 15% 92%;
+    --muted-foreground: 220 15% 45%;
+
+    --accent: 15 85% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --ring: 230 45% 30%;
+
+    --radius: 0.75rem;
+
+    /* Custom gradient tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(230 45% 30%), hsl(230 50% 45%));
+    --gradient-secondary: linear-gradient(135deg, hsl(190 85% 45%), hsl(200 80% 55%));
+    --gradient-accent: linear-gradient(135deg, hsl(15 85% 60%), hsl(25 90% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(230 45% 30%) 0%, hsl(190 85% 45%) 100%);
+    
+    /* Shadow tokens */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+    --shadow-glow: 0 0 40px hsl(190 85% 45% / 0.3);
+
+    /* Animation tokens */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 25% 8%;
+    --foreground: 220 15% 95%;
+
+    --card: 220 20% 12%;
+    --card-foreground: 220 15% 95%;
+
+    --popover: 220 20% 12%;
+    --popover-foreground: 220 15% 95%;
+
+    --primary: 230 60% 65%;
+    --primary-foreground: 220 25% 8%;
+
+    --secondary: 190 75% 50%;
+    --secondary-foreground: 220 25% 8%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 15% 65%;
+
+    --accent: 15 80% 65%;
+    --accent-foreground: 220 25% 8%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 220 15% 95%;
+
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 230 60% 65%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(230 60% 65%), hsl(230 55% 50%));
+    --gradient-secondary: linear-gradient(135deg, hsl(190 75% 50%), hsl(200 70% 60%));
+    --gradient-accent: linear-gradient(135deg, hsl(15 80% 65%), hsl(25 85% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(230 45% 20%) 0%, hsl(190 60% 30%) 100%);
+    
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 40px hsl(190 75% 50% / 0.4);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "kern" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-secondary);
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2;
+  }
+
+  .card-glow {
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-smooth);
+  }
+
+  .card-glow:hover {
+    box-shadow: var(--shadow-glow);
+  }
+}
