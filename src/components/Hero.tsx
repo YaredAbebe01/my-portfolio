@@ -53,7 +53,7 @@ const Hero = () => {
           
           <div className="flex gap-4 sm:gap-6 justify-center">
             <a 
-              href="https://github.com/yaredabebe" 
+              href="https://github.com/YaredAbebe01" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-white/70 hover:text-white transition-colors"
@@ -61,7 +61,7 @@ const Hero = () => {
               <Github className="h-6 w-6 sm:h-7 sm:w-7" />
             </a>
             <a 
-              href="https://linkedin.com/in/yaredabebe" 
+              href="www.linkedin.com/in/yared-abebe-47870b2b9" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-white/70 hover:text-white transition-colors"
@@ -69,7 +69,7 @@ const Hero = () => {
               <Linkedin className="h-6 w-6 sm:h-7 sm:w-7" />
             </a>
             <a 
-              href="#contact"
+              href="mailto:yaredabebe0101@gmail.com" 
               className="text-white/70 hover:text-white transition-colors"
             >
               <Mail className="h-6 w-6 sm:h-7 sm:w-7" />
