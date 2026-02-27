@@ -1,9 +1,10 @@
-
-node_modules/
-.env
-dist/
-build/
+**/node_modules/
+**/dist/
+**/build/
+.vite/
 .vscode/
 .DS_Store
-package-lock.json
-npm-debug.log
+npm-debug.log*
+**/.env
+**/.env.*
+!**/.env.example
