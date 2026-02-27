@@ -1,10 +1,74 @@
 import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 
 const skills = [
-  "Node.js", "Express.js", "React", "JavaScript", "TypeScript",
-  "HTML", "CSS", "Tailwind CSS", "SQL", "MongoDB",
-  "Git", "PHP", "MySQL", "Java Swing", "Postman"
+  {
+    name: "HTML",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  },
+  {
+    name: "JavaScript",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  },
+  {
+    name: "TypeScript",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  },
+  {
+    name: "React",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  },
+  {
+    name: "Next.js",
+    icon: "https://cdn.simpleicons.org/nextdotjs/000000",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4",
+  },
+  {
+    name: "Node.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  },
+  {
+    name: "Express.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+  },
+  {
+    name: "MongoDB",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+  },
+  {
+    name: "MySQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  },
+  {
+    name: "Python",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  },
+  {
+    name: "C++",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+  },
+  {
+    name: "Java",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+  },
+  {
+    name: "PHP",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+  },
+  {
+    name: "Git",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+  },
+  {
+    name: "Postman",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
+  },
+  {
+    name: "Power BI",
+    icon: "https://img.icons8.com/color/96/power-bi.png",
+  },
 ];
 
 const About = () => {
@@ -13,7 +77,7 @@ const About = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            About Me
+            Professional Summary
           </h2>
           <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
         </div>
@@ -22,16 +86,13 @@ const About = () => {
           <div className="space-y-6">
             <Card className="p-6 sm:p-8 card-glow hover-lift">
               <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-primary">
-                Software Engineer in the Making
+                Software Engineering Student | Full-Stack Developer
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                I'm a fourth-year Software Engineering student at Addis Ababa Science and Technology University with a strong passion for building efficient and user-friendly software solutions.
+                I am a fourth-year Software Engineering student at Addis Ababa Science and Technology University, focused on building secure backend services and scalable full-stack applications.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                I have hands-on experience in both frontend and backend development, having developed projects involving user authentication, blogging systems, QR-based menus, and auction platforms.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                I am a quick learner and a team player, always eager to take on new challenges and contribute to innovative projects.
+                I am a certified Data Analyst and Full-Stack Developer with hands-on experience in Node.js, Next.js, React Native, and other modern web technologies. With over one year of practical experience, I have worked on RESTful APIs, authentication, database design, and responsive frontend development. I am passionate about creating efficient, user-friendly, and impactful digital solutions, continuously learning and improving my skills across both backend and frontend domains.
               </p>
             </Card>
           </div>
@@ -39,50 +100,25 @@ const About = () => {
           <div>
             <Card className="p-6 sm:p-8 card-glow">
               <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-primary">
-                Technical Skills
+                Technical Skills Snapshot
               </h3>
-              <div className="flex flex-wrap gap-2">
-                {skills.map((skill, index) => (
-                  <Badge 
-                    key={index}
-                    variant="secondary"
-                    className="px-4 py-2 text-sm font-medium hover:scale-105 transition-transform"
+              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+                {skills.map((skill) => (
+                  <div
+                    key={skill.name}
+                    className="flex items-center gap-2 rounded-xl border border-border/70 bg-card/70 px-3 py-2"
                   >
-                    {skill}
-                  </Badge>
+                    <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/90 p-1.5">
+                      <img
+                        src={skill.icon}
+                        alt={`${skill.name} logo`}
+                        className="h-6 w-6 object-contain"
+                        loading="lazy"
+                      />
+                    </div>
+                    <span className="text-sm font-medium text-foreground">{skill.name}</span>
+                  </div>
                 ))}
-              </div>
-              
-              <div className="mt-8 space-y-4">
-                <div>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-sm font-medium">Full-Stack Development</span>
-                    <span className="text-sm text-muted-foreground">Advanced</span>
-                  </div>
-                  <div className="h-2 bg-muted rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-primary to-secondary w-[85%] rounded-full" />
-                  </div>
-                </div>
-                
-                <div>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-sm font-medium">Database Management</span>
-                    <span className="text-sm text-muted-foreground">Proficient</span>
-                  </div>
-                  <div className="h-2 bg-muted rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-primary to-secondary w-[80%] rounded-full" />
-                  </div>
-                </div>
-                
-                <div>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-sm font-medium">UI/UX Design</span>
-                    <span className="text-sm text-muted-foreground">Intermediate</span>
-                  </div>
-                  <div className="h-2 bg-muted rounded-full overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-primary to-secondary w-[70%] rounded-full" />
-                  </div>
-                </div>
               </div>
             </Card>
           </div>
