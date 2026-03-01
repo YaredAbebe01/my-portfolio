@@ -44,6 +44,10 @@ app.get("/", (req, res) => {
   res.json({ status: "ok", service: "portfolio-backend" });
 });
 
+app.get("/health", (req, res) => {
+  res.send("OK");
+});
+
 app.use("/api", apiRoutes);
 
 app.use((err, req, res, next) => {
