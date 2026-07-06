@@ -89,7 +89,7 @@ const About = () => {
                 Software Engineering Student | Full-Stack Developer
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                I am a fourth-year Software Engineering student at Addis Ababa Science and Technology University, focused on building secure backend services and scalable full-stack applications.
+                I am a fifth-year Software Engineering student at Addis Ababa Science and Technology University, focused on building secure backend services and scalable full-stack applications.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 I am a certified Data Analyst and Full-Stack Developer with hands-on experience in Node.js, Next.js, React Native, and other modern web technologies. With over one year of practical experience, I have worked on RESTful APIs, authentication, database design, and responsive frontend development. I am passionate about creating efficient, user-friendly, and impactful digital solutions, continuously learning and improving my skills across both backend and frontend domains.
